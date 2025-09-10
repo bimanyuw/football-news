@@ -14,7 +14,7 @@ def show_main(request):
         'news_list': news_list
     }
 
-    return render(request, "main/main.html", context)
+    return render(request, "main.html", context)
 
 def create_news(request):
     form = NewsForm(request.POST or None)
