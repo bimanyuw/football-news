@@ -20,7 +20,6 @@ load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
@@ -31,11 +30,9 @@ SECRET_KEY = 'django-insecure-*(_y6b7)x#$xg3gy5_#pse9aedyq$zs$v1uelbj=9qr8xvi=mi
 PRODUCTION = os.getenv('PRODUCTION', 'False').lower() == 'true'
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "febrian-abimanyu-footballnews.pbp.cs.ui.ac.id"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".pbp.cs.ui.ac.id"]
+CSRF_TRUSTED_ORIGINS = ["https://*.pbp.cs.ui.ac.id"]
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://febrian-abimanyu-footballnews.pbp.cs.ui.ac.id/"
-]
 
 # Application definition
 
