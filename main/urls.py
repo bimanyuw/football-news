@@ -6,6 +6,7 @@ from .views import (
 from main.views import login_user
 from main.views import register
 from main.views import logout_user
+from main.views import add_news_entry_ajax
 
 app_name = 'main'
 
@@ -22,4 +23,5 @@ urlpatterns = [
     path('register/', register, name='register'),
     path('login/', login_user, name='login'),
     path('logout/', logout_user, name='logout'),
+    path('create-news-ajax', add_news_entry_ajax, name='add_news_entry_ajax'),
 ]
